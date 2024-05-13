@@ -1,0 +1,8 @@
+C:\Users\ccerr\Documents\VISUAL ESTUDIO\Clinica_Medica\General\bin\Debug\General.dll
+C:\Users\ccerr\Documents\VISUAL ESTUDIO\Clinica_Medica\General\bin\Debug\General.pdb
+C:\Users\ccerr\Documents\VISUAL ESTUDIO\Clinica_Medica\General\obj\Debug\General.csproj.AssemblyReference.cache
+C:\Users\ccerr\Documents\VISUAL ESTUDIO\Clinica_Medica\General\obj\Debug\General.GUI.Home.resources
+C:\Users\ccerr\Documents\VISUAL ESTUDIO\Clinica_Medica\General\obj\Debug\General.csproj.GenerateResource.cache
+C:\Users\ccerr\Documents\VISUAL ESTUDIO\Clinica_Medica\General\obj\Debug\General.csproj.CoreCompileInputs.cache
+C:\Users\ccerr\Documents\VISUAL ESTUDIO\Clinica_Medica\General\obj\Debug\General.dll
+C:\Users\ccerr\Documents\VISUAL ESTUDIO\Clinica_Medica\General\obj\Debug\General.pdb
