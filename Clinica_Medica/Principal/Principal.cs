@@ -67,7 +67,7 @@ namespace Principal
 
         private void Salir_Click(object sender, EventArgs e)
         {
-            Close();
+            Application.Exit();
         }
 
         private void Principal_Load(object sender, EventArgs e)
@@ -76,6 +76,31 @@ namespace Principal
         }
 
         private void PanelEscritorio_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnPaciente_Click(object sender, EventArgs e)
+        {
+            PacientesGestion pacientes = new PacientesGestion();
+            /* home.MdiParent = this;
+             home.Show();*/
+            OpenFroms(pacientes);
+        }
+
+        private void btnCitas_Click(object sender, EventArgs e)
+        {
+            CitasGestion c = new CitasGestion();
+            OpenFroms(c);
+            /*
+            CitasGestion citas = new CitasGestion();
+             home.MdiParent = this;
+             home.Show();
+            OpenFroms(citas);
+            */
+        }
+
+        private void PanelEscritorio_Paint_1(object sender, PaintEventArgs e)
         {
 
         }
