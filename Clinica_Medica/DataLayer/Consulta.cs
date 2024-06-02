@@ -76,6 +76,22 @@ namespace DataLayer
             catch (Exception ex) { }
             return Resultado;
         }
+
+        public static DataTable ContadorDoctor()
+        {
+            DataTable Resultado = new DataTable();
+            String Consulta = @"SELECT COUNT(*) from clinica_medica.pacientes;";
+            DBOperaciones operacion = new DBOperaciones();
+            try
+            {
+                Resultado = operacion.Consultar(Consulta);
+            }
+            catch (Exception)
+            { }
+            return Resultado;
+        }
+
+
         public static DataTable Paciente()
         {
             DataTable Resultado = new DataTable();

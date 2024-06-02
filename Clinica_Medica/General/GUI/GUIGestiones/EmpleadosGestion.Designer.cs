@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EmpleadosGestion));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -69,18 +69,20 @@
             // 
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Location = new System.Drawing.Point(2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1168, 87);
+            this.panel1.Size = new System.Drawing.Size(876, 71);
             this.panel1.TabIndex = 3;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(11, 3);
+            this.label1.Location = new System.Drawing.Point(8, 2);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(178, 45);
+            this.label1.Size = new System.Drawing.Size(148, 37);
             this.label1.TabIndex = 0;
             this.label1.Text = "Empleados";
             // 
@@ -88,9 +90,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(14, 42);
+            this.label2.Location = new System.Drawing.Point(10, 34);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(165, 28);
+            this.label2.Size = new System.Drawing.Size(131, 21);
             this.label2.TabIndex = 1;
             this.label2.Text = "Lista de Empleados";
             // 
@@ -112,10 +115,10 @@
             this.toolStripLabel1,
             this.VistaPrevia});
             this.toolStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
-            this.toolStrip1.Location = new System.Drawing.Point(9, 93);
+            this.toolStrip1.Location = new System.Drawing.Point(7, 76);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.toolStrip1.Size = new System.Drawing.Size(1239, 48);
+            this.toolStrip1.Size = new System.Drawing.Size(929, 39);
             this.toolStrip1.TabIndex = 4;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -124,28 +127,28 @@
             this.Insertar.Image = ((System.Drawing.Image)(resources.GetObject("Insertar.Image")));
             this.Insertar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.Insertar.Name = "Insertar";
-            this.Insertar.Size = new System.Drawing.Size(82, 45);
+            this.Insertar.Size = new System.Drawing.Size(70, 36);
             this.Insertar.Text = "Insertar";
             this.Insertar.Click += new System.EventHandler(this.Insertar_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 48);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 39);
             // 
             // Modificar
             // 
             this.Modificar.Image = ((System.Drawing.Image)(resources.GetObject("Modificar.Image")));
             this.Modificar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.Modificar.Name = "Modificar";
-            this.Modificar.Size = new System.Drawing.Size(97, 45);
+            this.Modificar.Size = new System.Drawing.Size(82, 36);
             this.Modificar.Text = "Modificar";
             this.Modificar.Click += new System.EventHandler(this.Modificar_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 48);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 39);
             // 
             // Eliminar
             // 
@@ -153,7 +156,7 @@
             this.Eliminar.Image = ((System.Drawing.Image)(resources.GetObject("Eliminar.Image")));
             this.Eliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.Eliminar.Name = "Eliminar";
-            this.Eliminar.Size = new System.Drawing.Size(87, 45);
+            this.Eliminar.Size = new System.Drawing.Size(74, 36);
             this.Eliminar.Text = "Eliminar";
             this.Eliminar.Click += new System.EventHandler(this.Eliminar_Click);
             // 
@@ -163,7 +166,7 @@
             this.txtFiltro.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtFiltro.Name = "txtFiltro";
             this.txtFiltro.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtFiltro.Size = new System.Drawing.Size(250, 48);
+            this.txtFiltro.Size = new System.Drawing.Size(188, 39);
             this.txtFiltro.Click += new System.EventHandler(this.txtFiltro_Click);
             // 
             // toolStripLabel1
@@ -171,14 +174,14 @@
             this.toolStripLabel1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.toolStripLabel1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripLabel1.Image")));
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(20, 45);
+            this.toolStripLabel1.Size = new System.Drawing.Size(20, 36);
             // 
             // VistaPrevia
             // 
             this.VistaPrevia.Image = ((System.Drawing.Image)(resources.GetObject("VistaPrevia.Image")));
             this.VistaPrevia.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.VistaPrevia.Name = "VistaPrevia";
-            this.VistaPrevia.Size = new System.Drawing.Size(105, 45);
+            this.VistaPrevia.Size = new System.Drawing.Size(88, 36);
             this.VistaPrevia.Text = "VistaPrevia";
             this.VistaPrevia.Click += new System.EventHandler(this.VistaPrevia_Click);
             // 
@@ -187,9 +190,9 @@
             this.dtbEmpleado.AllowUserToAddRows = false;
             this.dtbEmpleado.AllowUserToDeleteRows = false;
             this.dtbEmpleado.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle2.Format = "N2";
-            dataGridViewCellStyle2.NullValue = null;
-            this.dtbEmpleado.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Format = "N2";
+            dataGridViewCellStyle1.NullValue = null;
+            this.dtbEmpleado.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtbEmpleado.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -210,13 +213,14 @@
             this.Linea2,
             this.ID_Cargo,
             this.ID_Direccion});
-            this.dtbEmpleado.Location = new System.Drawing.Point(2, 144);
+            this.dtbEmpleado.Location = new System.Drawing.Point(2, 117);
+            this.dtbEmpleado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtbEmpleado.MultiSelect = false;
             this.dtbEmpleado.Name = "dtbEmpleado";
             this.dtbEmpleado.ReadOnly = true;
             this.dtbEmpleado.RowHeadersWidth = 51;
             this.dtbEmpleado.RowTemplate.Height = 24;
-            this.dtbEmpleado.Size = new System.Drawing.Size(1251, 404);
+            this.dtbEmpleado.Size = new System.Drawing.Size(938, 328);
             this.dtbEmpleado.TabIndex = 6;
             // 
             // ID_empleado
@@ -342,34 +346,36 @@
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1,
             this.TotalEmpleados});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 551);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 447);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1253, 26);
+            this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 10, 0);
+            this.statusStrip1.Size = new System.Drawing.Size(940, 22);
             this.statusStrip1.TabIndex = 7;
             this.statusStrip1.Text = "statusStrip1";
             // 
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(151, 20);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(120, 17);
             this.toolStripStatusLabel1.Text = "Número de Doctores:";
             // 
             // TotalEmpleados
             // 
             this.TotalEmpleados.Name = "TotalEmpleados";
-            this.TotalEmpleados.Size = new System.Drawing.Size(17, 20);
+            this.TotalEmpleados.Size = new System.Drawing.Size(13, 17);
             this.TotalEmpleados.Text = "0";
             this.TotalEmpleados.Click += new System.EventHandler(this.toolStripStatusLabel2_Click);
             // 
             // EmpleadosGestion
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1253, 577);
+            this.ClientSize = new System.Drawing.Size(940, 469);
             this.Controls.Add(this.dtbEmpleado);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "EmpleadosGestion";
             this.Text = "Empleados";
             this.Load += new System.EventHandler(this.EmpleadosGestion_Load);
@@ -401,7 +407,6 @@
         private System.Windows.Forms.DataGridView dtbEmpleado;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
-        private System.Windows.Forms.ToolStripStatusLabel TotalEmpleados;
         private System.Windows.Forms.ToolStripButton VistaPrevia;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID_empleado;
         private System.Windows.Forms.DataGridViewTextBoxColumn DUI_Empleado;
@@ -416,5 +421,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Linea2;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID_Cargo;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID_Direccion;
+        public System.Windows.Forms.ToolStripStatusLabel TotalEmpleados;
     }
 }
