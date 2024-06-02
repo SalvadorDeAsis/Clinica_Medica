@@ -8,11 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Principal.GUI
 {
     public partial class Login : Form
     {
-        private Boolean _Autorizado = false;
+       private Boolean _Autorizado = false;
 
         public Login()
         {
@@ -26,15 +27,22 @@ namespace Principal.GUI
 
         }
 
-        private void btnEntrar_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnEntrar_Click_1(object sender, EventArgs e)
         {
             DataTable dt = new DataTable();
+
             DataLayer.DBOperaciones oOperacion = new DataLayer.DBOperaciones();
             //SELECT  IDUsuario,Usuario, IDRol FROM sistema.usuarios where usuario ='' and Clave=md5('');
             //String query = "SELECT idpersona, Nombre FROM persona WHERE Idpersona ='" + txtUsuario.Text + "' AND Nombre = '" + txtContra.Text + "';";
 
             String query = "SELECT ID_Usuario, ID_Empleado, ID_Rol FROM usuarios WHERE Usuario ='" + txtUsuario.Text + "' AND Clave = '" + txtClave.Text + "';";
             dt = oOperacion.Consultar(query);
+
 
             if (dt.Rows.Count == 1)
             {
@@ -45,11 +53,6 @@ namespace Principal.GUI
             {
                 MessageBox.Show("ERROR CONTRASEÑA O USUARIO INCORRECTO.");
             }
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
         }
     }
 }

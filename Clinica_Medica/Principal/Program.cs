@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Principal
 {
     internal static class Program
@@ -16,7 +17,7 @@ namespace Principal
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CLS.AppManager());
+            Application.Run(new Principal());
         }
     }
 }

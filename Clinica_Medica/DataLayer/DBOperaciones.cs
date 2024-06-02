@@ -54,6 +54,29 @@ namespace DataLayer
             }
             return FilasAfectadas;
         }
+        public object EjecutarEscalar(string pConsulta)
+        {
+            object resultado = null;
+            MySqlCommand comando = new MySqlCommand();
+
+            try
+            {
+                if (base.Conectar())
+                {
+                    comando.Connection = base._CONEXION;
+                    comando.CommandType = System.Data.CommandType.Text;
+                    comando.CommandText = pConsulta;
+                    resultado = comando.ExecuteScalar();
+                    base.Desconectar();
+                }
+            }
+            catch (Exception)
+            {
+                resultado = null; // Maneja el error según sea necesario
+            }
+
+            return resultado;
+        }
 
     }
 }

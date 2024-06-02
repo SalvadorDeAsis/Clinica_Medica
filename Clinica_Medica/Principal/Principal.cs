@@ -1,4 +1,5 @@
 ﻿using General.GUI;
+using General.GUI.GUIGestiones;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -75,34 +76,42 @@ namespace Principal
             
         }
 
-        private void PanelEscritorio_Paint(object sender, PaintEventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
+            DoctoresGestion doc = new DoctoresGestion();
+            OpenFroms(doc);
+        }
+
+        private void Empleados_Click(object sender, EventArgs e)
+        {
+            EmpleadosGestion Empleado = new EmpleadosGestion();
+            OpenFroms(Empleado);
 
         }
 
-        private void btnPaciente_Click(object sender, EventArgs e)
+        private void Pacientes_Click(object sender, EventArgs e)
         {
-            PacientesGestion pacientes = new PacientesGestion();
-            /* home.MdiParent = this;
-             home.Show();*/
+            PacientesGestion pacientes= new PacientesGestion();
             OpenFroms(pacientes);
+
         }
 
-        private void btnCitas_Click(object sender, EventArgs e)
+        private void Citas_Click(object sender, EventArgs e)
         {
-            CitasGestion c = new CitasGestion();
-            OpenFroms(c);
-            /*
-            CitasGestion citas = new CitasGestion();
-             home.MdiParent = this;
-             home.Show();
-            OpenFroms(citas);
-            */
+            CitasGestion citasGestion = new CitasGestion();
+            OpenFroms(citasGestion);
         }
 
-        private void PanelEscritorio_Paint_1(object sender, PaintEventArgs e)
+        private void btnUsuario_Click(object sender, EventArgs e)
         {
+            UsuariosGestion usuario = new UsuariosGestion();
+            OpenFroms(usuario);
+        }
 
+        private void Medicamento_Click(object sender, EventArgs e)
+        {
+            MedicamentoGestion medicamento = new MedicamentoGestion();
+            OpenFroms(medicamento);
         }
     }
 }

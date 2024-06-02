@@ -35,17 +35,14 @@
             // Cronometro
             // 
             this.Cronometro.Interval = 3000;
-            this.Cronometro.Tick += new System.EventHandler(this.Cronometro_Tick);
             // 
             // Splash
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(517, 498);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Name = "Splash";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Splash";
-            this.Load += new System.EventHandler(this.Splash_Load);
             this.ResumeLayout(false);
 
         }

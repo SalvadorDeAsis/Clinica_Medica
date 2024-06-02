@@ -16,16 +16,5 @@ namespace Principal.GUI
         {
             InitializeComponent();
         }
-
-        private void Splash_Load(object sender, EventArgs e)
-        {
-            Cronometro.Start();
-        }
-
-        private void Cronometro_Tick(object sender, EventArgs e)
-        {
-            Cronometro.Stop();
-            Close();
-        }
     }
 }
