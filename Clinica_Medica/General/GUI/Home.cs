@@ -68,5 +68,11 @@ namespace General.GUI
         {
 
         }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            Reportes.GUI.VisorCitas visorCitas = new Reportes.GUI.VisorCitas();
+            visorCitas.ShowDialog();
+        }
     }
 }

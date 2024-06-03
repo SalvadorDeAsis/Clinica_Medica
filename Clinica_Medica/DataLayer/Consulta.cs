@@ -285,8 +285,50 @@ namespace DataLayer
         public static DataTable Factura()
         {
             DataTable Resultado = new DataTable();
+            //primer cambio
+            String Consulta = @"
+                                SELECT f.ID_Factura, f.ID_Consulta,pa.NombresPaciente,f.Concepto, f.Monto, f.FechaEmision ,f.FechaPago, f.MetodoPago, f.SubTotal,f.Total, c.ID_Receta, rm.Cantidad,me.NombreInsumo, me.PrecioUnitario FROM Factura f 
+                                join Consulta c on c.ID_Consulta = f.ID_Consulta 
+                                Join Receta_Medica rm on rm.ID_Receta = c.ID_Receta 
+                                join Medicamentos me on me.ID_Insumo = rm.ID_Insumo 
+                                join citas ci on ci.ID_Cita = c.ID_Cita
+                                join pacientes pa on pa.ID_Paciente = ci.ID_Paciente ORDER BY ID_Factura ASC;";
+            DBOperaciones operacion = new DBOperaciones();
 
-            String Consulta = @"SELECT f.ID_Factura, f.ID_Consulta,f.Concepto, f.Monto, f.FechaEmision ,f.FechaPago, f.MetodoPago, f.SubTotal,f.Total, c.ID_Receta, rm.Cantidad, me.PrecioUnitario FROM Factura f join Consulta c on c.ID_Consulta = f.ID_Consulta Join Receta_Medica rm on rm.ID_Receta = c.ID_Receta join Medicamentos me on me.ID_Insumo = rm.ID_Insumo ORDER BY ID_Factura ASC;";
+            try
+            {
+                Resultado = operacion.Consultar(Consulta);
+
+            }
+            catch (Exception)
+            {
+
+
+            }
+
+            return Resultado;
+        }
+        public static DataTable CITAS_SEGUN_PERIODO(string pFechaInicio, string pFechaFinal)
+        {
+            DataTable Resultado = new DataTable();
+
+            String Consulta = @"
+                    SELECT 
+                        CI.ID_Cita AS CitaID, 
+                        CI.Fecha_Hora AS FechaHoraCita, 
+                        CONCAT(P.NombresPaciente, ' ', P.ApellidosPaciente) AS PacienteNombreCompleto, 
+                        CONCAT(D.NombresEmpleado, ' ', D.ApellidosEmpleado) AS DoctorNombreCompleto,
+                        E.Especialidad AS EspecialidadDoctor,
+                        CASE 
+                            WHEN CU.ID_Consulta IS NOT NULL THEN 'Atendida'
+                            ELSE 'Pendiente'
+                        END AS EstadoCita
+                    FROM Citas CI
+                    JOIN Pacientes P ON CI.ID_Paciente = P.ID_Paciente
+                    JOIN Consulta CU ON CI.ID_Cita = CU.ID_Cita
+                    JOIN Doctor DOC ON CU.ID_Doctor = DOC.ID_Doctor
+                    JOIN Empleados D ON DOC.ID_Empleado = D.ID_Empleado
+                    JOIN Especialidad E ON DOC.ID_Especialidad = E.ID_Especialidad WHERE cast(CI.Fecha_Hora As date) BETWEEN '"+ pFechaInicio + "' AND '"+pFechaFinal+ "' ORDER BY CI.Fecha_Hora DESC;";
             DBOperaciones operacion = new DBOperaciones();
 
             try

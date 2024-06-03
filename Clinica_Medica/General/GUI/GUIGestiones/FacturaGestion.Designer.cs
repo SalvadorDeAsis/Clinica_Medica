@@ -30,18 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FacturaGestion));
             this.dgvFactura = new System.Windows.Forms.DataGridView();
-            this.ID_Factura = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ID_Consulta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Concepto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Monto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaEmision = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaPago = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MetodoPago = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SubTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ID_Receta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PrecioUntitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.Insertar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -53,6 +41,21 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.VistaPrevia = new System.Windows.Forms.ToolStripButton();
+            this.ID_Factura = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID_Consulta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Concepto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Monto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaEmision = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaPago = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MetodoPago = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SubTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID_Receta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NombreInsumo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NombresPaciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PrecioUntitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFactura)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -72,6 +75,8 @@
             this.SubTotal,
             this.Total,
             this.ID_Receta,
+            this.NombreInsumo,
+            this.NombresPaciente,
             this.Cantidad,
             this.PrecioUntitario});
             this.dgvFactura.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -81,79 +86,6 @@
             this.dgvFactura.Size = new System.Drawing.Size(800, 340);
             this.dgvFactura.TabIndex = 16;
             this.dgvFactura.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFactura_CellContentClick);
-            // 
-            // ID_Factura
-            // 
-            this.ID_Factura.DataPropertyName = "ID_Factura";
-            this.ID_Factura.HeaderText = "ID Factura";
-            this.ID_Factura.Name = "ID_Factura";
-            // 
-            // ID_Consulta
-            // 
-            this.ID_Consulta.DataPropertyName = "ID_Consulta";
-            this.ID_Consulta.HeaderText = "ID_Consulta";
-            this.ID_Consulta.Name = "ID_Consulta";
-            // 
-            // Concepto
-            // 
-            this.Concepto.DataPropertyName = "Concepto";
-            this.Concepto.HeaderText = "Concepto";
-            this.Concepto.Name = "Concepto";
-            // 
-            // Monto
-            // 
-            this.Monto.DataPropertyName = "Monto";
-            this.Monto.HeaderText = "Monto";
-            this.Monto.Name = "Monto";
-            // 
-            // FechaEmision
-            // 
-            this.FechaEmision.DataPropertyName = "FechaEmision";
-            this.FechaEmision.HeaderText = "Fecha de emision";
-            this.FechaEmision.Name = "FechaEmision";
-            // 
-            // FechaPago
-            // 
-            this.FechaPago.DataPropertyName = "FechaPago";
-            this.FechaPago.HeaderText = "Fecha de Pago";
-            this.FechaPago.Name = "FechaPago";
-            // 
-            // MetodoPago
-            // 
-            this.MetodoPago.DataPropertyName = "MetodoPago";
-            this.MetodoPago.HeaderText = "Metodo de pago";
-            this.MetodoPago.Name = "MetodoPago";
-            // 
-            // SubTotal
-            // 
-            this.SubTotal.DataPropertyName = "SubTotal";
-            this.SubTotal.HeaderText = "SubTotal";
-            this.SubTotal.Name = "SubTotal";
-            // 
-            // Total
-            // 
-            this.Total.DataPropertyName = "Total";
-            this.Total.HeaderText = "Total";
-            this.Total.Name = "Total";
-            // 
-            // ID_Receta
-            // 
-            this.ID_Receta.DataPropertyName = "ID_Receta";
-            this.ID_Receta.HeaderText = "ID_Receta";
-            this.ID_Receta.Name = "ID_Receta";
-            this.ID_Receta.Visible = false;
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.DataPropertyName = "Cantidad";
-            this.Cantidad.HeaderText = "Cantidad";
-            this.Cantidad.Name = "Cantidad";
-            // 
-            // PrecioUntitario
-            // 
-            this.PrecioUntitario.DataPropertyName = "PrecioUnitario";
-            this.PrecioUntitario.HeaderText = "Precio";
-            this.PrecioUntitario.Name = "PrecioUntitario";
             // 
             // toolStrip1
             // 
@@ -167,7 +99,8 @@
             this.toolStripSeparator2,
             this.Eliminar,
             this.txtFiltrar,
-            this.toolStripLabel1});
+            this.toolStripLabel1,
+            this.VistaPrevia});
             this.toolStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
             this.toolStrip1.Location = new System.Drawing.Point(0, 71);
             this.toolStrip1.Name = "toolStrip1";
@@ -262,6 +195,101 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Lista de Facturas";
             // 
+            // VistaPrevia
+            // 
+            this.VistaPrevia.Image = ((System.Drawing.Image)(resources.GetObject("VistaPrevia.Image")));
+            this.VistaPrevia.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.VistaPrevia.Name = "VistaPrevia";
+            this.VistaPrevia.Size = new System.Drawing.Size(88, 36);
+            this.VistaPrevia.Text = "VistaPrevia";
+            this.VistaPrevia.Click += new System.EventHandler(this.VistaPrevia_Click);
+            // 
+            // ID_Factura
+            // 
+            this.ID_Factura.DataPropertyName = "ID_Factura";
+            this.ID_Factura.HeaderText = "ID Factura";
+            this.ID_Factura.Name = "ID_Factura";
+            // 
+            // ID_Consulta
+            // 
+            this.ID_Consulta.DataPropertyName = "ID_Consulta";
+            this.ID_Consulta.HeaderText = "ID_Consulta";
+            this.ID_Consulta.Name = "ID_Consulta";
+            // 
+            // Concepto
+            // 
+            this.Concepto.DataPropertyName = "Concepto";
+            this.Concepto.HeaderText = "Concepto";
+            this.Concepto.Name = "Concepto";
+            // 
+            // Monto
+            // 
+            this.Monto.DataPropertyName = "Monto";
+            this.Monto.HeaderText = "Monto";
+            this.Monto.Name = "Monto";
+            // 
+            // FechaEmision
+            // 
+            this.FechaEmision.DataPropertyName = "FechaEmision";
+            this.FechaEmision.HeaderText = "Fecha de emision";
+            this.FechaEmision.Name = "FechaEmision";
+            // 
+            // FechaPago
+            // 
+            this.FechaPago.DataPropertyName = "FechaPago";
+            this.FechaPago.HeaderText = "Fecha de Pago";
+            this.FechaPago.Name = "FechaPago";
+            // 
+            // MetodoPago
+            // 
+            this.MetodoPago.DataPropertyName = "MetodoPago";
+            this.MetodoPago.HeaderText = "Metodo de pago";
+            this.MetodoPago.Name = "MetodoPago";
+            // 
+            // SubTotal
+            // 
+            this.SubTotal.DataPropertyName = "SubTotal";
+            this.SubTotal.HeaderText = "SubTotal";
+            this.SubTotal.Name = "SubTotal";
+            // 
+            // Total
+            // 
+            this.Total.DataPropertyName = "Total";
+            this.Total.HeaderText = "Total";
+            this.Total.Name = "Total";
+            // 
+            // ID_Receta
+            // 
+            this.ID_Receta.DataPropertyName = "ID_Receta";
+            this.ID_Receta.HeaderText = "ID_Receta";
+            this.ID_Receta.Name = "ID_Receta";
+            this.ID_Receta.Visible = false;
+            // 
+            // NombreInsumo
+            // 
+            this.NombreInsumo.DataPropertyName = "NombreInsumo";
+            this.NombreInsumo.HeaderText = "NombreInsumo";
+            this.NombreInsumo.Name = "NombreInsumo";
+            this.NombreInsumo.Visible = false;
+            // 
+            // NombresPaciente
+            // 
+            this.NombresPaciente.DataPropertyName = "NombresPaciente";
+            this.NombresPaciente.HeaderText = "Nombres";
+            this.NombresPaciente.Name = "NombresPaciente";
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.DataPropertyName = "Cantidad";
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.Name = "Cantidad";
+            // 
+            // PrecioUntitario
+            // 
+            this.PrecioUntitario.DataPropertyName = "PrecioUnitario";
+            this.PrecioUntitario.HeaderText = "Precio";
+            this.PrecioUntitario.Name = "PrecioUntitario";
+            // 
             // FacturaGestion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -285,18 +313,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvFactura;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID_Factura;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID_Consulta;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Concepto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Monto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FechaEmision;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FechaPago;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MetodoPago;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SubTotal;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Total;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID_Receta;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PrecioUntitario;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton Insertar;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
@@ -308,5 +324,20 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ToolStripButton VistaPrevia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID_Factura;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID_Consulta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Concepto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Monto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FechaEmision;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FechaPago;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MetodoPago;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SubTotal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Total;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID_Receta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NombreInsumo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NombresPaciente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PrecioUntitario;
     }
 }

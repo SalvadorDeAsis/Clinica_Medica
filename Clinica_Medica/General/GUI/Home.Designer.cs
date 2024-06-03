@@ -60,6 +60,7 @@
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             this.OutLogin = new System.Windows.Forms.ToolStripLabel();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -351,7 +352,8 @@
             this.toolStripButton2,
             this.toolStripLabel2,
             this.OutLogin,
-            this.toolStripButton1});
+            this.toolStripButton1,
+            this.toolStripButton3});
             this.toolStrip1.Location = new System.Drawing.Point(0, 71);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(953, 33);
@@ -391,6 +393,15 @@
             this.toolStripButton1.Name = "toolStripButton1";
             this.toolStripButton1.Size = new System.Drawing.Size(23, 30);
             this.toolStripButton1.Text = "toolStripButton1";
+            // 
+            // toolStripButton3
+            // 
+            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
+            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton3.Name = "toolStripButton3";
+            this.toolStripButton3.Size = new System.Drawing.Size(68, 30);
+            this.toolStripButton3.Text = "Reporte";
+            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
             // 
             // Home
             // 
@@ -469,5 +480,6 @@
         private System.Windows.Forms.ToolStripButton toolStripButton2;
         private System.Windows.Forms.ToolStripLabel OutLogin;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton toolStripButton3;
     }
 }

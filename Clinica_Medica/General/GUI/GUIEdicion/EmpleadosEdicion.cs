@@ -172,5 +172,10 @@ namespace General.GUI
         {
             Application.Exit();
         }
+
+        private void txtDireccion_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

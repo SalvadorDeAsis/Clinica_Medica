@@ -1,5 +1,6 @@
 ﻿using General.CLS;
 using General.GUI.GUIEdicion;
+using General.GUI.VistaPrevia;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -121,6 +122,28 @@ namespace General.GUI.GUIGestiones
         private void dgvFactura_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void VistaPrevia_Click(object sender, EventArgs e)
+        {
+            VistaPreviaFactura f = new VistaPreviaFactura();
+
+            if (dgvFactura.CurrentRow != null)
+            {
+                f.ID_Factura.Text = dgvFactura.CurrentRow.Cells["ID_Factura"].Value.ToString();
+                f.NombresPaciente.Text = dgvFactura.CurrentRow.Cells["NombresPaciente"].Value.ToString();
+                f.Medicamento.Text = dgvFactura.CurrentRow.Cells["NombreInsumo"].Value.ToString();
+                f.Cantidad.Text = dgvFactura.CurrentRow.Cells["Cantidad"].Value.ToString();
+                // f.FechaNacEmpleado.Text = dtbEmpleado.CurrentRow.Cells["FechaNacEmpleado"].Value.ToString();
+                f.CostoCon.Text = dgvFactura.CurrentRow.Cells["Monto"].Value.ToString();
+                f.FechaPago.Text = dgvFactura.CurrentRow.Cells["FechaPago"].Value.ToString();
+                f.SubTotal.Text = dgvFactura.CurrentRow.Cells["SubTotal"].Value.ToString();
+                f.Total.Text = dgvFactura.CurrentRow.Cells["Total"].Value.ToString();
+                //f.ID_Direccion.Text = dtbEmpleado.CurrentRow.Cells["ID_Direccion"].Value.ToString();
+
+
+            }
+            f.ShowDialog();
         }
     }
 }
